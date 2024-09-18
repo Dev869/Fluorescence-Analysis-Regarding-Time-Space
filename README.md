@@ -1,4 +1,4 @@
-# Wilson Lab: Calcium Analysis Toolkit
+# Fluorescence Analysis Regarding Time Space
 ## Included Tools
 - [CAIMAN](https://github.com/flatironinstitute/CaImAn)
 - [RAAIM](https://github.com/aedobyns/lab)
