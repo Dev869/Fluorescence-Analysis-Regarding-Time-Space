@@ -7,5 +7,4 @@
 - [S8](https://github.com/franccm/s8)
 
 ## Notes
-Included are the pipelines and workflows for all of the toolkits listed above. Links are attatched to each which will have its own information.
-
+We had to do a lot of editing of the programs listed above to fit them to our specific needs. As such, you may not find a whole lot of success when trying to just use the demo pipelines listed above for calcium analysis. Feel free to browse this repository for tools.
