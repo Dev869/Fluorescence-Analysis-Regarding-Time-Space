@@ -1,0 +1,2 @@
+Framerate: 1.5895
+Pixels/Micron: 0.2635765

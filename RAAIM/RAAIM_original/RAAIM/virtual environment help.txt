@@ -1,0 +1,9 @@
+conda create -n py27 python=2.7
+conda activate py27
+python --version
+conda install -c conda-forge notebook
+conda install ipykernel
+python -m ipykernel install --user --name py27 --display-name "Python 2.7 (py27)"
+pip install -r Requirements.txt
+jupyter notebook
+
