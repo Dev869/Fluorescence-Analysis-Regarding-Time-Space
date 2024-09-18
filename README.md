@@ -8,3 +8,4 @@
 
 ## Notes
 We had to do a lot of editing of the programs listed above to fit them to our specific needs. As such, you may not find a whole lot of success when trying to just use the demo pipelines listed above for calcium analysis. Feel free to browse this repository for tools.
+**I had to remove all of the video (.TIFF) files as they were too large to fit in here.**
