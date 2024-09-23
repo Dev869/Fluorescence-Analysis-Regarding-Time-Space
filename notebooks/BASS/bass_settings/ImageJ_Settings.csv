@@ -1,0 +1,38 @@
+"	Settings: ",50:03.2
+"Absolute Value",TRUE
+"Baseline Start",0
+"Baseline Stop",10
+"Apnea Factor",.9
+"Bandpass Highcut",none
+"Bandpass Lowcut",none
+"Bandpass Polynomial",none
+"Baseline Type",static
+"Burst Area",FALSE
+"Delta",none
+"Inter-event interval minimum (time-scale units)",.78
+"Maximum Burst Duration (time-scale units)",10
+"Minimum Burst Duration (time-scale units)",0
+"Exclude Edges",TRUE
+"File Type",ImageJ
+"Generate Graphs",FALSE
+"Graph LCpro events",FALSE
+"Inter-event interval minimum (seconds)",0.01
+"Label",ROI normalized.txt
+"Linear Fit",FALSE
+"Linear Fit-Rolling R",0
+"Linear Fit-Rolling Window",476
+"Maximum Burst Duration (s)",10
+"Milliseconds",FALSE
+"Minimum Burst Duration (s)",0
+"Minimum Peak Number",1
+"Output Folder",/Users/devinwilson/Documents/lab_docs/data/OUTPUTS/test
+"Peak Maximum",0
+"Peak Minimum",0.7
+"Relative Baseline",0
+"Rolling Baseline Window",500
+"Sample Rate (s/frame)",0.00025
+"Savitzky-Golay Polynomial",4
+"Savitzky-Golay Window Size",301
+"Threshold",0.15
+"folder",/Users/devinwilson/Documents/lab_docs/data/INPUTS/test_input
+"plots folder",/Users/devinwilson/Documents/lab_docs/data/OUTPUTS/test/plots
