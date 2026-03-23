@@ -11,8 +11,8 @@ A calcium fluorescence imaging analysis toolkit for neuroscience research. This 
 | [CaImAn](#caiman-calcium-imaging-analysis) | [flatironinstitute/CaImAn](https://github.com/flatironinstitute/CaImAn) | Neuron extraction from calcium imaging videos |
 | [RAAIM](#raaim-roi-relationship-analysis) | [aedobyns/lab](https://github.com/aedobyns/lab) | ROI relationship analysis (correlations, clustering) |
 | [BASS](#bass-biomedical-analysis-software-suite) | [drcgw/bass](https://github.com/drcgw/bass) | Event detection and analysis in time-series data |
-| [Cadence](https://github.com/asenicos/cadence) | asenicos/cadence | Calcium dynamics analysis |
-| [S8](https://github.com/franccm/s8) | franccm/s8 | Supplementary analysis tools |
+| [Cadence](#cadence-calcium-events-detection) | [asenicos/cadence](https://github.com/asenicos/cadence) | Supervised calcium event detection and rasterization |
+| [S8](#s8-n-dimensional-signal-analytics) | [franccm/s8](https://github.com/franccm/s8) | Particle-based dynamic ROI detection in TIFF stacks |
 
 ## Overall Workflow
 
@@ -255,6 +255,60 @@ jupyter notebook
 numpy, scipy, pandas, matplotlib, Pillow, h5py, six
 
 PyEEG is bundled as `pyeeg.py` in the BASS directory (required for approximate/sample entropy).
+
+---
+
+## Cadence (Calcium Events Detection)
+
+**Upstream:** [asenicos/cadence](https://github.com/asenicos/cadence)
+
+A neuroinformatics tool for supervised detection and rasterization of calcium events from dF/F fluorescence traces. After calcium imaging videos are processed into relative fluorescence traces (by CaImAn, ImageJ/Fiji, MiniAn, etc.), Cadence provides an interactive GUI for reviewing, accepting, and exporting detected events.
+
+### Features
+
+- **Qt6 GUI** (PySide6) for interactive channel-by-channel review and acceptance of detected events
+- **Configurable peak detection** with adjustable threshold and window parameters
+- **Low-pass / high-pass filtering** of dF/F traces (recommended for Celena X data; not needed for MiniAn-processed Miniscope data)
+- **Fast throughput** — up to 20 channels per minute
+- **Export** of rasterized event data to text files for downstream analysis
+- **Integration with Elephant/Viziphant** for spike-train analysis (mean firing rate, synchrony, ensemble detection)
+
+### Dependencies
+
+Python 3.8+, PySide6, SciPy, Pandas, Matplotlib. Optional: Elephant, Viziphant (for downstream spike-train analysis).
+
+### Reference
+
+Aseyev et al., *Neuroinformatics* (2024), DOI: [10.1007/s12021-024-09677-3](https://doi.org/10.1007/s12021-024-09677-3)
+
+---
+
+## S8 (N-Dimensional Signal Analytics)
+
+**Upstream:** [franccm/s8](https://github.com/franccm/s8)
+
+An n-dimensional signal analytics tool that uses particle analysis to define dynamic regions of interest (ROIs) in time-series microscopy image data. Processes multi-frame TIFF stacks to detect, track, and analyze transient biological signals or events.
+
+### Features
+
+- **TIFF stack loading** via PIMS for multi-frame microscopy data
+- **Temporal smoothing** using Savitzky-Golay filtering with spatial noise reduction and baseline subtraction
+- **Adaptive thresholding** with selectable algorithms: Otsu, Triangle, or Yen
+- **Binary image segmentation** with noise gating, region labeling, and morphological filtering
+- **Particle tracking** of centroids and properties across time frames (via Trackpy)
+- **Wave/propagation analysis** — divergence/convergence patterns and wave behavior
+- **Metrics extraction** — area, intensity amplitude, duration, and coordinates per event
+
+### Outputs
+
+- Processed TIFF images (filtered, binary, masked)
+- PDF report with 7 visualization pages (scatter plots, 3D trajectories, spatial maps)
+- Pickle files with complete event dictionaries
+- Optional CSV exports with ROI data and coordinates
+
+### Dependencies
+
+Python 3.8+, NumPy, Trackpy, Matplotlib, Plotly, psutil, PIMS, scikit-image, SciPy, tifffile, tqdm
 
 ---
 
