@@ -1,4 +1,4 @@
-# Fluorescence Analysis Regarding Time-Space (FARTS)
+# Fluorescence Analysis Pipline
 
 A calcium fluorescence imaging analysis toolkit for neuroscience research. This repository integrates and customizes several open-source tools into Jupyter notebook pipelines for extracting neurons from calcium imaging videos, detecting physiological events in time-series signals, and analyzing relationships between regions of interest (ROIs).
 
